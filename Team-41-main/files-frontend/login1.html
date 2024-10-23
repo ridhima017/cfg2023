@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css">
+  <style>
+    section{
+            padding: 60px 0;
+        }
+  </style>
+</head>
+<body>
+  <div class="m-auto loginpage">
+    <div class="loginform p-5 mt-5">
+      <h1 class="text-white fw-bold text-center mb-3">LOGIN</h1>
+      <form>
+        <input type="text" placeholder="Username" class="form-control mb-3 p-2" />
+        <p class="text-danger ms-4">*Enter Username</p>
+        <input type="password" placeholder="Password" class="form-control mb-3 p-2" />
+        <p class="text-danger ms-4">*Enter Password</p>
+        <button type="submit" class="btn btn-primary d-block m-auto">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Add any additional JavaScript code here
+    const tooltips = document.querySelectorAll('.tt')
+        tooltips.forEach(t=>{
+            new bootstrap.Tooltip(t)
+        })
+  </script>
+</body>
+</html>

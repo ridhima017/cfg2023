@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lake</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="Lake.css">
+  <style>
+    /* Add any additional CSS styles here */
+    section{
+            padding: 60px 0;
+        }
+  </style>
+
+</head>
+<body>
+  <section id="contact">
+    <div class="container-lg">
+      <!-- Add existing form content -->
+       <form action="/AddLake" method="post" enctype="multipart/form-data">
+        <!-- Existing form content -->
+
+        <label for="streetLocality" class="form-label">
+          Street/Locality:
+        </label>
+        <div class="mb-4 input-group">
+          <span class="input-group-text">
+            <i class="bi bi-house"></i>
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            id="streetLocality"
+            placeholder="e.g. Park Street"
+            name="streetLocality"
+          />
+        </div>
+
+        <label for="city" class="form-label">
+          City:
+        </label>
+        <div class="mb-4 input-group">
+          <span class="input-group-text">
+            <i class="bi bi-geo-alt"></i>
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            id="city"
+            placeholder="e.g. New York"
+            name="city"
+          />
+        </div>
+
+        <label for="state" class="form-label">
+          State:
+        </label>
+        <div class="mb-4 input-group">
+          <span class="input-group-text">
+            <i class="bi bi-flag"></i>
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            id="state"
+            placeholder="e.g. California"
+            name="state"
+          />
+        </div>
+
+        <label for="pincode" class="form-label">
+          Pincode:
+        </label>
+        <div class="mb-4 input-group">
+          <span class="input-group-text">
+            <i class="bi bi-geo-alt"></i>
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            id="pincode"
+            placeholder="e.g. 123456"
+            name="pincode"
+          />
+        </div>
+
+        <label for="image" class="form-label">
+          Image:
+        </label>
+        <div class="mb-4 input-group">
+          <input
+            class="form-control form-control-sm"
+            id="image"
+            type="file"
+            name="picture"
+          />
+        </div>
+
+        <div class="mb-4 text-center">
+          <button type="submit" class="btn btn-secondary">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Add any additional JavaScript code here
+    const tooltips = document.querySelectorAll('.tt')
+        tooltips.forEach(t=>{
+            new bootstrap.Tooltip(t)
+        })
+  </script>
+</body>
+</html>

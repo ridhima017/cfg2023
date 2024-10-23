@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("partials/navbar.ejs" );%>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JanJagrati Trust</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    section {
+      padding: 60px 0;
+    }
+
+    .treeimg {
+      width: 400px;
+      height: 400px;
+    }
+
+    .lakeimg {
+      width: 400px;
+      height: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <section id="trees" class="bg-light mt-5">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2>Different Trees</h2>
+      </div>
+
+      <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 my-5">
+        <% data.forEach(tree => { %>
+        <div class="col mb-4">
+          <div class="card border-3 shadow-lg border-secondary">
+            <div class="card-body text-center py-4">
+              <h4 class="card-title"><%= tree.species %></h4>
+              <img src="https://plus.unsplash.com/premium_photo-1675006717262-a8f9aed248a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmFtYm9vfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"
+                alt="<%= tree.species %>" height="180px">
+              <ul>
+                <li>City: <%= tree.city %></li>
+                <li>Street Locality: <%= tree.streetLocality %></li>
+                <li>State: <%= tree.state %></li>
+                <li>Pincode: <%= tree.pincode %></li>
+                <li>Soil Type: <%= tree.soil %></li>
+                <!-- Add more properties as needed -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <section id="lakes" class="bg-light mt-5">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2>Different Lakes</h2>
+      </div>
+
+      <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 my-5">
+        <% data1.forEach(Lake => { %>
+        <div class="col mb-4">
+          <div class="card border-3 shadow-lg border-secondary">
+            <div class="card-body text-center py-4">
+              <img src="https://plus.unsplash.com/premium_photo-1675006717262-a8f9aed248a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmFtYm9vfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"
+                alt="" height="180px">
+              <ul>
+                <li>City: <%= Lake.city %></li>
+                <li>Street Locality: <%= Lake.streetLocality %></li>
+                <li>State: <%= Lake.state %></li>
+                <li>Pincode: <%= Lake.pincode %></li>
+                <!-- Add more properties as needed -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script>
+    const tooltips = document.querySelectorAll('.tt')
+    tooltips.forEach(t => {
+      new bootstrap.Tooltip(t)
+    })
+  </script>
+</body>
+
+</html>

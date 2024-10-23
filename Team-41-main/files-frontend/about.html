@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JanJagrati Trust   </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+        section{
+            padding: 60px 0;
+        }
+    </style>
+
+</head>
+<body>
+
+
+
+
+
+    <!-- main image & intro text -->
+    <section id="Home">      <!-- css in done in head-->
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 text-center text-md-start">
+                 <h1>
+                    <div class="display-2">About</div>
+                    <div class="display-5 text-muted">What information about trees and lake  you can provide us </div>
+                 </h1>
+                 <p class="lead my-4 text-muted">Janjagrati trust aims to bring awareness to holistic well-being .Janajagrati is now aimimg to fulfill a new requirement for the government
+                    i.e. to be able to tag trees and lakes on a map using technology.So you can provide us the details of trees and lakes in your locality 
+                    like species ,location etc.
+                 </p>
+                <a href="#trees" class="btn btn-secondary btn-lg"> Tag now </a>
+
+
+                </div>
+
+                <div class="col-md-3 text-center d-none d-lg-block height: 400px">
+                   <!-- tooltip  -->
+                   <!-- they would be added using javascript  -->
+                   <!-- data-bs means where we want to place bs bootstrap  -->
+                   <span class="tt" data-bs-placement="bottom" title="Trees and Lakes  " >
+                    <img class="img-fluid" src="https://img.freepik.com/free-photo/landscape-decoration-nature-reflection-mountains-lawn_1417-1032.jpg?size=626&ext=jpg&ga=GA1.2.1348285716.1689447611&semt=ais" alt="trees and lakes  " height="600px">
+                    <img class="img-fluid my-5" src="https://4kwallpapers.com/images/walls/thumbs_3t/4920.jpg" alt="trees and lakes  "  height="300px">
+                   </span>
+
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    
+
+
+    <section id="register" >
+        <!-- contact in navgar gonna come in this -->
+        <div class="container-lg">
+            <div class="text-center">
+                <h2> Register for Event </h2>
+            </div>
+
+            <div class="row justify-content-center my-5 ">
+                <div class="col-lg-6">
+                    <form >
+
+                        <label for="name" class="form-label">Name:</label>
+                        <div class="mb-4 input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-person-circle"></i>
+                            </span>
+                            <input type="text" class="form-control" id="name" placeholder="e.g. Rajesh">
+
+
+                            <!-- tooltip  -->
+                            <span class="input-group-text">
+                                <span class="tt" data-bs-placement="bottom" title=" Write your name  ">
+                                    <i class="bi bi-question-circle text-muted "></i> 
+                                </span>
+                                
+                            </span>
+                        </div>
+
+                        <label for="event" class="form-label"> Events in which you want to participate </label>
+                        <div class="mb-4 input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-chat-left-fill"></i>  
+                            </span>
+                            <select class="form-select" id="subject">
+                                <option value="event1" selected>Indepandance Day </option>
+                                <option value="event2"> Republic Day </option>
+                                
+                            </select>
+                            
+                        </div>
+
+
+                        <label for="location" class="form-label">Location:</label>
+                        <div class="mb-4 input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-geo-alt"></i>
+                            </span>
+                            <input type="text" class="form-control" id="name" placeholder="e.g. Ambazaari Nagpur">
+
+
+                            <!-- tooltip  -->
+                            <span class="input-group-text">
+                                <span class="tt" data-bs-placement="bottom" title=" What is the location of lake   ">
+                                    <i class="bi bi-question-circle text-muted "></i> 
+                                </span>
+                                
+                            </span>
+                        </div>
+                       
+                        <div class="mb-4 text-center">
+                            <button type="submit" class="btn btn-secondary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <!-- for tooltip  -->
+     <script>
+        const tooltips = document.querySelectorAll('.tt')
+        tooltips.forEach(t=>{
+            new bootstrap.Tooltip(t)
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lake</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="Lake.css">
+  <style>
+    /* Add any additional CSS styles here */
+    section{
+            padding: 60px 0;
+        }
+  </style>
+</head>
+<body>
+  <section id="contact">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2>Lake</h2>
+        <p class="lead">Enter the details</p>
+      </div>
+
+      <div class="row justify-content-center my-5">
+        <div class="col-lg-6">
+          <form>
+            <label for="name" class="form-label">
+              Name:
+            </label>
+            <div class="mb-4 input-group">
+              <span class="input-group-text">
+                <i class="bi bi-droplet-fill"></i>
+              </span>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="e.g. Ambazzari"
+              />
+
+              <!-- tooltip -->
+              <span class="input-group-text">
+                <span
+                  class="tt"
+                  data-bs-placement="bottom"
+                  title="Write the name of the lake"
+                >
+                  <i class="bi bi-question-circle text-muted "></i>
+                </span>
+              </span>
+            </div>
+
+            <label for="status" class="form-label">
+              What is the condition of the lake?
+            </label>
+            <div class="mb-4 input-group">
+              <span class="input-group-text">
+                <i class="bi bi-chat-left-fill"></i>
+              </span>
+              <select class="form-select" id="status">
+                <option value="Excellent" selected>
+                  Excellent
+                </option>
+                <option value="Good">Good</option>
+                <option value="Bad">Bad</option>
+              </select>
+            </div>
+
+            <label for="location" class="form-label">
+              Location:
+            </label>
+            <div class="mb-4 input-group">
+              <span class="input-group-text">
+                <i class="bi bi-geo-alt"></i>
+              </span>
+              <input
+                type="text"
+                class="form-control"
+                id="location"
+                placeholder="e.g. Ambazaari Nagpur"
+              />
+
+              <!-- tooltip -->
+              <span class="input-group-text">
+                <span
+                  class="tt"
+                  data-bs-placement="bottom"
+                  title="What is the location of the lake"
+                >
+                  <i class="bi bi-question-circle text-muted "></i>
+                </span>
+              </span>
+            </div>
+
+            <label for="image" class="form-label">
+              Image:
+            </label>
+            <div class="mb-4 input-group">
+              <input
+                class="form-control form-control-sm"
+                id="formFileSm"
+                type="file"
+              />
+
+              <!-- tooltip -->
+              <span class="input-group-text">
+                <span
+                  class="tt"
+                  data-bs-placement="bottom"
+                  title="Upload the current picture of the lake"
+                >
+                  <i class="bi bi-question-circle text-muted "></i>
+                </span>
+              </span>
+            </div>
+
+            <div class="mb-4 text-center">
+              <button type="submit" class="btn btn-secondary">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light">
+    <div class="container">
+      <div class="text-center">
+        <h2>Stay in the loop</h2>
+        <p class="lead">Get the latest updates as they happen...</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <p class="text-muted my-4">
+            You will be notified of all events when they happen
+          </p>
+          <button
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#reg-modal"
+          >
+            Register for updates
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-title">
+            Get the Latest Updates
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p></p>
+          <label for="modal-email" class="form-label">
+            Your email address
+          </label>
+          <input
+            type="email"
+            class="form-control"
+            id="modal-email"
+            placeholder="e.g.mario@example.com"
+          />
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Add any additional JavaScript code here
+    const tooltips = document.querySelectorAll('.tt')
+        tooltips.forEach(t=>{
+            new bootstrap.Tooltip(t)
+        })
+  </script>
+</body>
+</html>

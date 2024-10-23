@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css">
+  <style>
+    /* Add any additional CSS styles here */
+    section{
+            padding: 60px 0;
+        }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="display-2 text-center text-green">Signup</div>
+    <div class="row">
+      <div class="col-12 col-sm-8 col-md-6 mx-auto">
+        <form>
+          <!-- username -->
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter Username">
+            <p class="text-danger">* Username is required</p>
+          </div>
+
+          <!-- password -->
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter Password">
+            <p class="text-danger">* Password is required</p>
+          </div>
+
+          <!-- email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email" placeholder="Enter email">
+            <p class="text-danger">* Email is required</p>
+          </div>
+
+          <!-- city -->
+          <div class="mb-3">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" id="city" placeholder="Enter city">
+            <p class="text-danger">* City is required</p>
+          </div>
+
+          <!-- state -->
+          <div class="mb-3">
+            <label for="state" class="form-label">State</label>
+            <select class="form-select" id="state">
+              <option value="">Select a state</option>
+              <!-- State options dynamically generated -->
+            </select>
+            <p class="text-danger">* State is required</p>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Signup</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Add any additional JavaScript code here
+    const tooltips = document.querySelectorAll('.tt')
+        tooltips.forEach(t=>{
+            new bootstrap.Tooltip(t)
+        })
+  </script>
+</body>
+</html>

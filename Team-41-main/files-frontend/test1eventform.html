@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Events</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+  <style>
+   section{
+            padding: 60px 0;
+        }
+  </style>
+</head>
+<body>
+  <section id="events">
+    <div class="container-md">
+      <div class="text-center">
+        <h2>About the events</h2>
+        <p class="lead text-muted">A quick glance at some of our events</p>
+      </div>
+
+      <div class="row my-5 g-5 justify-content-center align-items-center">
+        <div class="col-6 col-lg-4">
+          <img src="https://www.ugaoo.com/cdn/shop/articles/shutterstock_417312760.jpg?v=1661869375" class="img-fluid" alt="events">
+        </div>
+
+        <div class="col-lg-6">
+          <div class="accordion" id="events">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#events-1" aria-expanded="true" aria-controls="events-1">
+                  Upcoming Events
+                </button>
+              </h2>
+              <div id="events-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#events">
+                <div class="accordion-body">
+                  <p>22nd July </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#events-2" aria-expanded="true" aria-controls="events-2">
+                  Major Events
+                </button>
+              </h2>
+              <div id="events-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#events">
+                <div class="accordion-body">
+                  <p>Independence day</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary my-3" id="register">
+              Register for events
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Add any additional JavaScript code here
+  </script>
+</body>
+</html>
